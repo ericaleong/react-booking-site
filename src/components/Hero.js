@@ -1,3 +1,4 @@
+// hero image on all the pages
 import React from 'react';
 
 export default function Hero({children, hero}) {
