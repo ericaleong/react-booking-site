@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import defaultBcg from '../images/vipassana1.jpg';
-import Hero from '../components/Hero';
 import Banner from '../components/Banner';
 import {Link} from 'react-router-dom';
 import {WorkshopContext} from '../context';

@@ -76,15 +76,13 @@ class WorkshopProvider extends Component {
       workshops,
       type,
       price, 
-      minPrice, 
-      maxPrice
     } = this.state
 
 // all the workshops
     let tempWorkshops = [... workshops];
 
 // transofrm value
-    price = parseInt(price);
+    price = parseInt(price)
 
 //filter by type
     if(type !== 'all'){
