@@ -1,3 +1,5 @@
+// space and accessToken are in an .env to hide the access
+// used to access data from Contentful
 import {createClient} from 'contentful';
 
 export default createClient({

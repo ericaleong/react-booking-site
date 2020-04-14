@@ -1,8 +1,6 @@
 // React context is "global" for React components (components folder in this project)
 
 import React, {Component} from 'react';
-// This commented out code was there the data was fetched from before using Contenful, so I'm leaving it here anyway
-// import items from './data';
 import Client from './Contentful';
 
 

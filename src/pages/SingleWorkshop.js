@@ -1,3 +1,4 @@
+// class base component setup
 import React, { Component } from 'react';
 // imported default images from data.js incase the image in contentful is a broken image
 import defaultBcg from '../images/vipassana1.jpg';
@@ -64,6 +65,7 @@ Component {
           <h6>Capacity: {" "}
             {capacity > 1 ? `${capacity} people` : `${capacity} person`}
           </h6>
+          <h6><a className="btn-primary" href="#">Book Now</a></h6>
         </article>
       </div>
    </section>
