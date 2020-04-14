@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import items from './data';
+// import items from './data';
+import Client from './Contentful';
 
 const WorkshopContext = React.createContext();
 
@@ -16,19 +17,31 @@ class WorkshopProvider extends Component {
   };
 
   // getData
-  componentDidMount(){
-    let workshops = this.formatData(items);
-    let featuredWorkshops = workshops.filter(workshop => workshop.featured === true);
-    let maxPrice = Math.max(...workshops.map(item => item.price));
+  getData = async () => {
+    try {
+      let response = await Client.getEntries({
+        content_type: 'bookingSite',
+        order: "fields.name"
+      });
+      let workshops = this.formatData(response.items);
+      let featuredWorkshops = workshops.filter(workshop => workshop.featured === true);
+      let maxPrice = Math.max(...workshops.map(item => item.price));
+  
+      this.setState({
+        workshops,
+        featuredWorkshops,
+        sortedWorkshops: workshops, 
+        loading: false,
+        price: maxPrice,
+        maxPrice
+      });
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
-    this.setState({
-      workshops,
-      featuredWorkshops,
-      sortedWorkshops: workshops, 
-      loading: false,
-      price: maxPrice,
-      maxPrice
-    });
+  componentDidMount(){
+    this.getData()
   };
 
   formatData(items) {

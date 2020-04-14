@@ -315,14 +315,14 @@ export default [
       id: "7"
     },
     fields: {
-      name: "chakra alignment",
-      slug: "chakra-alignment",
+      name: "chakra awakening",
+      slug: "chakra-awakening",
       type: "workshop",
       price: 40,
       capacity: 7,
       featured: false,
       description:
-        "Expect to leave this workshop completely in balance and with a new clarity! Whether you have physical, mental, emotional, or spiritual blocks, our Chakra Alignment will set things straight. Learn about the Chakra system as you go through this powerful healing process! ",
+        "Expect to leave this workshop completely in balance and with a new clarity! Whether you have physical, mental, emotional, or spiritual blocks, our Chakra Awakening will set things straight. Learn about the Chakra system as you go through this powerful healing process! ",
       images: [
         {
           fields: {
