@@ -76,10 +76,10 @@ class WorkshopProvider extends Component {
       workshops,
       type,
       price, 
-    } = this.state
+    } = this.state;
 
 // all the workshops
-    let tempWorkshops = [... workshops];
+    let tempWorkshops = [...workshops];
 
 // transofrm value
     price = parseInt(price)
