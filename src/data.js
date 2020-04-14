@@ -1,3 +1,5 @@
+// A lot of imports! This is why contenful is useful
+
 import singingbowl1 from "./images/singingbowl1.jpg";
 import singingbowl2 from "./images/singingbowl2.jpg";
 import singingbowl3 from "./images/singingbowl3.jpg";

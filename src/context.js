@@ -1,7 +1,12 @@
+// React context is "global" for React components (components folder in this project)
+
 import React, {Component} from 'react';
+// This commented out code was there the data was fetched from before using Contenful, so I'm leaving it here anyway
 // import items from './data';
 import Client from './Contentful';
 
+
+// Creating a Context object
 const WorkshopContext = React.createContext();
 
 class WorkshopProvider extends Component {
@@ -16,10 +21,11 @@ class WorkshopProvider extends Component {
     maxPrice: 0
   };
 
-  // getData
+  // get Data from Contentful
   getData = async () => {
     try {
       let response = await Client.getEntries({
+        // bookingSite is from the Contentful API I created
         content_type: 'bookingSite',
         order: "fields.name"
       });
@@ -43,6 +49,7 @@ class WorkshopProvider extends Component {
   componentDidMount(){
     this.getData()
   };
+
 
   formatData(items) {
     let tempItems = items.map(item =>{
@@ -84,17 +91,19 @@ class WorkshopProvider extends Component {
 // transofrm value
     price = parseInt(price)
 
-//filter by type
+//filter by type of workshop
     if(type !== 'all'){
       tempWorkshops = tempWorkshops.filter(workshop => workshop.type === type)
     }
-//filter by price
+//filter by price of workshop
     tempWorkshops = tempWorkshops.filter(workshop => workshop.price <= price);
     this.setState({
       sortedWorkshops: tempWorkshops
     });
   };
 
+// Provider is used to pass WorkshopContext down the tree, putting the components into the pages
+// Using props to handle all the data
   render() {
     return (
     <WorkshopContext.Provider value={{...this.state, getWorkshop: this.getWorkshop, handleChange: this.handleChange

@@ -1,3 +1,5 @@
+//Banner inside of hero image
+
 import React from 'react';
 
 export default function Banner({children,title,subtitle}) {

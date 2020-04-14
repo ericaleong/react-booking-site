@@ -20,7 +20,7 @@
 }
 
 
-/* globals */
+/* Styles consistent through website */
 body {
   padding-top: 66px;
 
@@ -282,7 +282,6 @@ h6 {
 
 
 /* featured workshop */
-
 .featured-workshops {
   padding: 5rem 0;
 }
@@ -313,7 +312,7 @@ h6 {
 }
 
 
-/* workshop */
+/* workshop page */
 .workshop {
   transition: var(--mainTransition);
 }
@@ -388,7 +387,7 @@ h6 {
 }
 
 
-/* single workshop*/
+/* single workshop */
 
 .single-workshop {
   padding: 5rem 0 0 0;
@@ -441,29 +440,9 @@ h6 {
   font-weight: 300;
 }
 
-.workshop-extras {
-  width: 80vw;
-  margin: 0 auto 3rem auto;
-}
-
-.workshop-extras h6 {
-  text-transform: capitalize;
-  letter-spacing: var(--mainSpacing);
-}
-
-.extras {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-  grid-column-gap: 2rem;
-  grid-row-gap: 1rem;
-
-  list-style-type: none;
-}
-
 @media screen and (min-width: 992px) {
   .single-workshop-images,
-  .single-workshopinfo,
-  .workshop-extras {
+  .single-workshopinfo {
     width: 95vw;
     max-width: 1170px;
   }
@@ -480,7 +459,7 @@ h6 {
 }
 
 
-/* workshoplist */
+/* for the workshop list */
 .workshopslist {
   padding: 5rem 0;
 }
@@ -509,7 +488,7 @@ h6 {
 }
 
 
-/*  workshops fitler*/
+/* for the workshop filter section */
 .filter-container {
   padding: 5rem 0;
 }

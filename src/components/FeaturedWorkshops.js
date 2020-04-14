@@ -1,3 +1,5 @@
+// Workshops featured below the homepage hero. The featured workshops are interchangeable through Contentful
+
 import React, {Component} from 'react';
 import {WorkshopContext} from '../context';
 import Loading from './Loading';

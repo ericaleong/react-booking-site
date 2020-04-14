@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// imported default images from data.js incase the image in contentful is a broken image
 import defaultBcg from '../images/vipassana1.jpg';
 import Banner from '../components/Banner';
 import {Link} from 'react-router-dom';
@@ -15,7 +16,7 @@ Component {
     };
   };
   static contextType = WorkshopContext;
-  // componentDidMount(){}
+
   render() {
     const {getWorkshop} = this.context;
     const workshop = getWorkshop(this.state.slug);

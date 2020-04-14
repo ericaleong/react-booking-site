@@ -15,10 +15,13 @@ function App() {
     <Route exact path="/" component={Home}/>
     <Route exact path="/workshops/" component={Workshops}/>
     <Route exact path="/workshops/:slug" component={SingleWorkshop}/>
+    {/* Goes to an error page is there is no exact matching route */}
     <Route component={Error} />
     </Switch>
     </>
   );
 }
+// Switch component will only render the first route that matches or includes the path
+// Route to render the url path that is matched
 
 export default App;

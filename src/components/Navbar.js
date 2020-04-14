@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../images/aura-children-logov2.png';
+// npm install react-icons lets you use icons from popular sites such as Font Awesome without having to download the icon directly
 import {FaAlignRight} from 'react-icons/fa';
 import {Link} from 'react-router-dom';
 
