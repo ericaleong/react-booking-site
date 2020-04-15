@@ -72,6 +72,7 @@ class WorkshopProvider extends Component {
     return workshop;
   };
 
+  // setup for filtering workshops
   handleChange = event => {
     this.setState(
     this.filterWorkshops)

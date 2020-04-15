@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Rufina&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Maitree|Montserrat|Rufina&display=swap');
 
 * {
   margin: 0;
@@ -28,6 +28,9 @@ body {
 
   line-height: 1.4;
   color: var(--purple);
+}
+
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Rufina', serif;
 }
 
@@ -56,13 +59,7 @@ h4 {
   font-size: 1.2em;
   line-height: 1.25;
 }
-h5 {
-  margin-bottom: 1.5em;
-
-  font-size: 1em;
-  font-weight: bold;
-}
-h6 {
+h5, h6 {
   margin-bottom: 1.5em;
 
   font-size: 1em;
@@ -71,18 +68,19 @@ h6 {
 
 .btn-primary {
   display: inline-block;
+
   padding: 0.4rem 0.9rem;
   border: 3px solid var(--blue);
 
   background: var(--blue);
+
   transition: var(--mainTransition);
   
   text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: var(--mainSpacing);
   color: var(--purple);
-  text-transform: uppercase;
-
-  cursor: pointer;
 }
 
 .btn-primary:hover {
@@ -122,11 +120,14 @@ h6 {
   top: 0;
   left: 0;
   width: 100%;
+
   padding: 0.75rem 2rem;
 
   background: var(--purple);
 
   z-index: 1;
+
+  font-family: 'Montserrat', sans-serif;
 }
 
 .nav-header {
@@ -138,9 +139,6 @@ h6 {
   border: none;
 
   background: transparent;
-  outline: none;
-
-  cursor: pointer;
 }
 
 .nav-icon {
@@ -151,6 +149,7 @@ h6 {
 .nav-links {
   height: 0;
   overflow: hidden;
+
   transition: var(--mainTransition);
 
   list-style-type: none;
@@ -158,14 +157,15 @@ h6 {
 
 .nav-links a {
   display: block;
+
   padding: 1rem 0;
 
   transition: var(--mainTransition);
 
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--offWhite);
   text-align: center;
+  color: var(--offWhite);
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: var(--mainSpacing);
@@ -173,6 +173,7 @@ h6 {
 
 .nav-links a:hover {
   background: var(--taupe);
+
   color: var(--purple);
 }
 
@@ -195,8 +196,9 @@ h6 {
   }
 
   .nav-links {
-    height: auto;
     display: flex;
+
+    height: auto;
     margin-left: 4rem;
   }
 
@@ -210,11 +212,13 @@ h6 {
 /* Hero */
 .defaultHero,
 .workshopsHero {
-  min-height: calc(100vh - 66px);
-  background: url("./images/camilo-jimenez-mUCnQpBZzXA-unsplash.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  min-height: calc(100vh - 66px);
+
+  background: url("./images/workshop-hero.jpg") center/cover no-repeat;
 }
 .workshopsHero {
   background-image: url("./images/denis-oliveira-_12PwFpWZZ0-unsplash.jpg");
@@ -227,9 +231,11 @@ h6 {
   flex-direction: column;
   align-items: center;
 
-  background: rgba(70, 68, 68, 0.5);
-  color: var(--mainWhite);
   padding: 2rem 1rem;
+
+  background: rgba(122, 122, 122, 0.45);
+
+  color: var(--mainWhite);
   text-align: center;
   text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
@@ -240,12 +246,16 @@ h6 {
 .banner div {
   width: 10rem;
   height: 5px;
-  background: var(--blue);
+
   margin: 1.7rem auto;
+
+  background: var(--blue);
 }
 .banner p {
-  font-size: 1.2rem;
   margin-bottom: 2rem;
+
+  font-size: 1.2rem;
+  font-family: 'Maitree', serif;
 }
 @media screen and (min-width: 576px) {
   .banner {
@@ -339,7 +349,8 @@ h6 {
 .price-top {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
+
   padding: 0.3rem 0.6rem 0.5rem;
 
   background: var(--taupe);
@@ -410,17 +421,19 @@ h6 {
   grid-column-gap: 50px;
 }
 .single-workshop-images img {
+  display: block;
+
   width: 300px;
   height: 200px;
+
   object-fit: cover;
-  display: block;
 }
 
 .single-workshop-info {
   width: 80vw;
-  display: grid;
   margin: 2rem auto;
 
+  display: grid;
   grid-template-columns: 1fr;
 }
 
@@ -436,6 +449,8 @@ h6 {
 
 .desc p {
   line-height: 1.5;
+
+  font-family: 'Maitree', serif;
 }
 
 .info h3,
