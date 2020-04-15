@@ -13,12 +13,13 @@ export default function Workshop({workshop}) {
       <article className="workshop">
         <div className="img-container">
           <img src={images[0]} alt="single workshop"/>
-          <div className="date-top">
-            <h6><Moment format="MMM D">{date}</Moment></h6>
+          <div className="price-top">
+            <h6>${price}</h6>
           </div>
           <Link to={`/workshops/${slug}`} className="btn-primary workshop-link">More Info</Link>
         </div>
         <p className="workshop-info">{name}</p>
+        <h6 className="workshop-date"><Moment format="MMM D, YYYY">{date}</Moment></h6>
       </article>
   );
 };

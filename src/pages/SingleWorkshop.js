@@ -46,6 +46,7 @@ Component {
       description,
       capacity,
       date,
+      guide,
       price,
       images
     } = workshop;
@@ -74,6 +75,7 @@ Component {
         <p>{description}</p>
         </article>
         <article className="info">
+          <h6>Guide: {guide}</h6>
           <h6>Date: <Moment format="MMM D, YYYY">{date}</Moment></h6>
           <h6>Price: ${price}</h6>
           <h6>Capacity: {" "}

@@ -325,7 +325,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: var(--mainTransition);
 }
 
-.date-top {
+.price-top {
   position: absolute;
   top: 0;
   right: 0;
@@ -341,7 +341,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-.date-top h6 {
+.price-top h6 {
   margin-bottom: 0;
 
   font-size: 0.9rem;
@@ -366,7 +366,7 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 0.3;
 }
 
-.img-container:hover .date-top {
+.img-container:hover .price-top {
   opacity: 0;
 }
 
@@ -383,6 +383,16 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   font-weight: 700;
   letter-spacing: var(--mainSpacing);
+}
+
+.workshop-date {
+  padding: 0.4rem 0;
+  background: var(--blue);
+
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: var(--mainSpacing);
+  color: var(--offWhite);
 }
 
 

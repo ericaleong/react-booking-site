@@ -16,6 +16,7 @@ class WorkshopProvider extends Component {
     featuredWorkshops: [],
     loading: true,
     type: 'all',
+    guide: 'all',
     date: '',
     price: 0,
     minPrice: 0,
@@ -39,6 +40,7 @@ class WorkshopProvider extends Component {
         featuredWorkshops,
         sortedWorkshops: workshops,
         date: '', 
+        guide: '',
         loading: false,
         price: maxPrice,
         maxPrice
