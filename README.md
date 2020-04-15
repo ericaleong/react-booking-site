@@ -9,3 +9,5 @@ Contentful used to store all the data. Great option if this was for a client and
 It would be nice to eventually implement an actual payment option in this site for "clients".
 
 Based off this awesome super in-depth tutorial from freecodecamp https://www.youtube.com/watch?v=LXJOvkVYQqA&t=5060s
+
+Images provided from unsplash.com as well as some taken from myself.
