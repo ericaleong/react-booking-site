@@ -26,11 +26,10 @@ class WorkshopProvider extends Component {
     try {
       let response = await Client.getEntries({
         content_type: 'bookingSite',
-        // put workshops in alphabetical order
         order: "fields.name"
       });
       let workshops = this.formatData(response.items);
-      // to show workshops featured on the home page (boolean is set up in contentful as to which one shows)
+  // to show workshops featured on the home page (boolean is set up in contentful as to which one shows)
       let featuredWorkshops = workshops.filter(workshop => workshop.featured === true);
       let maxPrice = Math.max(...workshops.map(item => item.price));
   
@@ -64,17 +63,22 @@ class WorkshopProvider extends Component {
   return tempItems
   };
 
-// setting up for a single workshop page
+  // setting up for a single workshop page
   getWorkshop = slug => {
-    // copy and find values from workshop array
     let tempWorkshops = [...this.state.workshops];
     const workshop = tempWorkshops.find(workshop => workshop.slug === slug);
     return workshop;
   };
 
-  // setup for filtering workshops
+  // for filter to function 
   handleChange = event => {
+    const target = event.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value 
+    const name = event.target.name;
     this.setState(
+      {
+      [name]:value
+    },
     this.filterWorkshops)
   };
   filterWorkshops = ()=>{
@@ -87,7 +91,7 @@ class WorkshopProvider extends Component {
 // all the workshops
     let tempWorkshops = [...workshops];
 
-// transform value
+// transofrm value
     price = parseInt(price)
 
 //filter by type of workshop

@@ -8,7 +8,8 @@ import {Link} from 'react-router-dom';
 import {WorkshopContext} from '../context';
 import StyledHero from '../components/StyledHero';
 
-export default class SingleWorkshop extends Component {
+export default class SingleWorkshop extends 
+Component {
   constructor(props){
     // calling parent (super) constructor before calling this constructor
     super(props);
@@ -51,7 +52,7 @@ export default class SingleWorkshop extends Component {
     return (
       <>
     <StyledHero img={mainImg || this.state.defaultBcg}>
-      <Banner title={`${name} Workshop`}>
+      <Banner title={`${name}`}>
         <Link to='/workshops' className="btn-primary">
           Back to Workshops
         </Link>

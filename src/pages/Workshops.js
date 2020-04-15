@@ -10,6 +10,7 @@ const Workshops = () => {
       <Hero hero="workshopsHero">
       <Banner title="Discover Workshops" subtitle="Guided by world class Gurus"></Banner>
       </Hero>
+
       <WorkshopContainer/>
   </>
   );
