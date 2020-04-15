@@ -7,6 +7,8 @@ import Banner from '../components/Banner';
 import {Link} from 'react-router-dom';
 import {WorkshopContext} from '../context';
 import StyledHero from '../components/StyledHero';
+// to adjust dates
+import Moment from 'react-moment';
 
 export default class SingleWorkshop extends 
 Component {
@@ -43,11 +45,13 @@ Component {
       name,
       description,
       capacity,
+      date,
       price,
       images
     } = workshop;
     const [mainImg,...defaultImg] = images;
-    
+
+
     // putting the data and style on the page from context and components
     return (
       <>
@@ -70,6 +74,7 @@ Component {
         <p>{description}</p>
         </article>
         <article className="info">
+          <h6>Date: <Moment format="MMM D, YYYY">{date}</Moment></h6>
           <h6>Price: ${price}</h6>
           <h6>Capacity: {" "}
           {/* changing people to person depending on the capacity (1 person or 2+ people) */}

@@ -29,13 +29,16 @@ Component {
             <FaAlignRight className="nav-icon" />
           </button>
         </div>
-          {/* the links for the nav bar in the mobile view */}
+        
         <ul className={this.state.isOpen?"nav-links show-nav" : "nav-links"}>
           <li>
             <Link to="/">Home</Link>
           </li>
           <li>
             <Link to="/workshops">Workshops</Link>
+          </li>
+          <li>
+            <Link to="/connect">Connect</Link>
           </li>
         </ul>
       </div>

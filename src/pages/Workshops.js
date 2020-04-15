@@ -8,7 +8,7 @@ const Workshops = () => {
   return (
     <>
       <Hero hero="workshopsHero">
-      <Banner title="Discover Workshops" subtitle="Guided by world class Gurus"></Banner>
+      <Banner title="All Our Workshops" subtitle="Guided by world class Gurus"></Banner>
       </Hero>
 
       <WorkshopContainer/>

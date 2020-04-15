@@ -16,6 +16,7 @@ class WorkshopProvider extends Component {
     featuredWorkshops: [],
     loading: true,
     type: 'all',
+    date: '',
     price: 0,
     minPrice: 0,
     maxPrice: 0
@@ -26,7 +27,7 @@ class WorkshopProvider extends Component {
     try {
       let response = await Client.getEntries({
         content_type: 'bookingSite',
-        order: "fields.name"
+        order: "fields.date"
       });
       let workshops = this.formatData(response.items);
   // to show workshops featured on the home page (boolean is set up in contentful as to which one shows)
@@ -36,7 +37,8 @@ class WorkshopProvider extends Component {
       this.setState({
         workshops,
         featuredWorkshops,
-        sortedWorkshops: workshops, 
+        sortedWorkshops: workshops,
+        date: '', 
         loading: false,
         price: maxPrice,
         maxPrice
