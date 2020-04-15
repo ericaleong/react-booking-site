@@ -1,9 +1,10 @@
 // functional based component
-// Workshops page
+// Workshop card on workshop page
 import React from 'react';
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+// destructing workshop to grab each object
 export default function Workshop({workshop}) {
   const{name,slug,images,price} = workshop;
     return (
@@ -20,6 +21,7 @@ export default function Workshop({workshop}) {
   );
 };
 
+// making sure data received is valid with propTypes
 Workshop.propTypes = {
   workshop:PropTypes.shape({
     name:PropTypes.string.isRequired,

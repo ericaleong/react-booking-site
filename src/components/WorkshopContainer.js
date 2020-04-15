@@ -1,11 +1,13 @@
 // functional based component
-// a single workshop within the list of workshops
+// displaying filters and list of workshops below workshop hero
 import React from 'react';
 import WorkshopFilter from './WorkshopFilter';
 import WorkshopList from './WorkshopList';
 import {withWorkshopConsumer} from '../context';
 import Loading from './Loading';
 
+
+// access workshops from exported context
 function WorkshopContainer({context}){
   const {loading, sortedWorkshops, workshops} = context;
     if(loading) {

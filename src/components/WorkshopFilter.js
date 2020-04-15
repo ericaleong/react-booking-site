@@ -10,6 +10,7 @@ const getUnique = (items, value) =>{
   return [...new Set(items.map(item => item[value]))]
 };
 
+// objects being filtered
 export default function WorkshopFilter({workshops}) {
   const context = useContext(WorkshopContext);
   const  {

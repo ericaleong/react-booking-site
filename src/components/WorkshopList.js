@@ -3,6 +3,7 @@
 import React from 'react';
 import Workshop from './Workshop';
 
+// message if no workshop matches filter criteria
 export default function WorkshopList({workshops}) {
 if(workshops.length === 0){
   return(
@@ -11,6 +12,7 @@ if(workshops.length === 0){
     </div>
   );
 };
+// display full list of workshops
   return (
     <section className="workshopsList">
       <div className="workshopslist-center">

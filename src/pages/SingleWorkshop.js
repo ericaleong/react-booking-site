@@ -1,26 +1,32 @@
 // class based component setup
+// setup for each individual workshop page
 import React, { Component } from 'react';
-// imported default images from data.js incase the image in contentful is a broken image
+// imported default images from data.js incase the image in contentful isn't loading
 import defaultBcg from '../images/vipassana1.jpg';
 import Banner from '../components/Banner';
 import {Link} from 'react-router-dom';
 import {WorkshopContext} from '../context';
 import StyledHero from '../components/StyledHero';
 
-export default class SingleWorkshop extends
-Component {
+export default class SingleWorkshop extends Component {
   constructor(props){
+    // calling parent (super) constructor before calling this constructor
     super(props);
     this.state={
+      //unique for each workshop
       slug:this.props.match.params.slug,
       defaultBcg
     };
   };
+
+  // access context
   static contextType = WorkshopContext;
 
+  // destruct
   render() {
     const {getWorkshop} = this.context;
     const workshop = getWorkshop(this.state.slug);
+    // page if no slug exists
     if(!workshop) {
       return (
       <div className="error">
@@ -31,6 +37,7 @@ Component {
       </div>
       );
     };
+    // page data if slug exists
     const {
       name,
       description,
@@ -40,6 +47,7 @@ Component {
     } = workshop;
     const [mainImg,...defaultImg] = images;
     
+    // putting the data and style on the page from context and components
     return (
       <>
     <StyledHero img={mainImg || this.state.defaultBcg}>
@@ -63,6 +71,7 @@ Component {
         <article className="info">
           <h6>Price: ${price}</h6>
           <h6>Capacity: {" "}
+          {/* changing people to person depending on the capacity (1 person or 2+ people) */}
             {capacity > 1 ? `${capacity} people` : `${capacity} person`}
           </h6>
           <h6><a className="btn-primary" href="#">Book Now</a></h6>

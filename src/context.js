@@ -64,15 +64,15 @@ class WorkshopProvider extends Component {
   return tempItems
   };
 
+// setting up for a single workshop page
   getWorkshop = slug => {
+    // copy and find values from workshop array
     let tempWorkshops = [...this.state.workshops];
     const workshop = tempWorkshops.find(workshop => workshop.slug === slug);
     return workshop;
   };
 
   handleChange = event => {
-    // const target = event.target;
-    // const name = event.target.name;
     this.setState(
     this.filterWorkshops)
   };
