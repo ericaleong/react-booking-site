@@ -1,13 +1,15 @@
+// class based component
 // React context is "global" for React components (components folder in this project)
-
 import React, {Component} from 'react';
 import Client from './Contentful';
 
 
-// Creating a Context object
+// Creates a Context object
 const WorkshopContext = React.createContext();
 
+// will allow access to context all throughout site of our React components
 class WorkshopProvider extends Component {
+  //all info goes into state which is later called and used in components
   state = {
     workshops: [],
     sortedWorkshops: [],
@@ -19,15 +21,16 @@ class WorkshopProvider extends Component {
     maxPrice: 0
   };
 
-  // get Data from Contentful
+  // get workshops Data from Contentful
   getData = async () => {
     try {
       let response = await Client.getEntries({
-        // bookingSite is from the Contentful API I created
         content_type: 'bookingSite',
+        // put workshops in alphabetical order
         order: "fields.name"
       });
       let workshops = this.formatData(response.items);
+      // to show workshops featured on the home page (boolean is set up in contentful as to which one shows)
       let featuredWorkshops = workshops.filter(workshop => workshop.featured === true);
       let maxPrice = Math.max(...workshops.map(item => item.price));
   
@@ -48,12 +51,13 @@ class WorkshopProvider extends Component {
     this.getData()
   };
 
-
+  // loads list of workshops in featured workshops section and workshops page
   formatData(items) {
     let tempItems = items.map(item =>{
   let id = item.sys.id
+  // every item is an object in contentful
   let images = item.fields.images.map(image => image.fields.file.url);
-
+  // ...item used to access all properties in item
   let workshop = {...item.fields, images, id}
   return workshop;
     });
@@ -67,13 +71,9 @@ class WorkshopProvider extends Component {
   };
 
   handleChange = event => {
-    const target = event.target;
-    const value = target.type === 'checkbox' ? target.checked : target.value 
-    const name = event.target.name;
+    // const target = event.target;
+    // const name = event.target.name;
     this.setState(
-      {
-      [name]:value
-    },
     this.filterWorkshops)
   };
   filterWorkshops = ()=>{
@@ -86,7 +86,7 @@ class WorkshopProvider extends Component {
 // all the workshops
     let tempWorkshops = [...workshops];
 
-// transofrm value
+// transform value
     price = parseInt(price)
 
 //filter by type of workshop
@@ -100,18 +100,21 @@ class WorkshopProvider extends Component {
     });
   };
 
-// Provider is used to pass WorkshopContext down the tree, putting the components into the pages
+// Provider allows components to use context changes
 // Using props to handle all the data
   render() {
     return (
     <WorkshopContext.Provider value={{...this.state, getWorkshop: this.getWorkshop, handleChange: this.handleChange
     }}>
+      {/* children used to display what is included between opening and closing tags when invoking component */}
       {this.props.children}
     </WorkshopContext.Provider>
     );
   };
 };
 
+// Consumer responsible for accessing information 
+// Allows you to use context within a component
 const WorkshopConsumer = WorkshopContext.Consumer;
 
 export function withWorkshopConsumer(Component){
@@ -122,6 +125,5 @@ export function withWorkshopConsumer(Component){
   };
 };
 
-
-
+//multiple ways components access the data
 export{WorkshopProvider, WorkshopConsumer, WorkshopContext};

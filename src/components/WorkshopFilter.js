@@ -1,3 +1,4 @@
+// class based component
 // filtering workshops component through type and price
 import React from 'react';
 import {useContext} from 'react';

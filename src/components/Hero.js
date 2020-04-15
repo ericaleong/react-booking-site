@@ -1,4 +1,4 @@
-// functional component for hero image on all the pages
+// functional based component for hero image on all the pages
 import React from 'react';
 
 //children to access everything within the hero banner (see banner.js)

@@ -1,3 +1,4 @@
+// functional based component
 // a single workshop within the list of workshops
 import React from 'react';
 import WorkshopFilter from './WorkshopFilter';

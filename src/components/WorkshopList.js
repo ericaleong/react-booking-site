@@ -1,3 +1,4 @@
+// functional based component
 // full list of workshops below the filters
 import React from 'react';
 import Workshop from './Workshop';

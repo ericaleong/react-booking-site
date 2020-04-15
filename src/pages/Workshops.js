@@ -1,4 +1,4 @@
-// functional base component setup
+// functional based component setup
 import React from 'react';
 import Hero from '../components/Hero';
 import Banner from '../components/Banner';
@@ -10,7 +10,6 @@ const Workshops = () => {
       <Hero hero="workshopsHero">
       <Banner title="Discover Workshops" subtitle="Guided by world class Gurus"></Banner>
       </Hero>
-
       <WorkshopContainer/>
   </>
   );

@@ -1,4 +1,4 @@
-//functional component - Banner inside of hero image
+//functional based component - Banner inside of hero image
 import React from 'react';
 
 // place children in banner to render on the hero page
