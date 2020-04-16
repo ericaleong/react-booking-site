@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Maitree|Montserrat|Rufina&display=swap');
 
+/* Styles consistent through website */
 * {
   margin: 0;
   padding: 0;
@@ -19,8 +20,6 @@
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-
-/* Styles consistent through website */
 body {
   padding-top: 66px;
 
@@ -33,10 +32,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5em;
 
+  font-family: 'Rufina', serif;
   font-size: 1em;
   line-height: 1.5;
-
-  font-family: 'Rufina', serif;
 }
 
 .btn-primary {
@@ -87,7 +85,6 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: var(--mainSpacing);
 }
 
-
 /* Navbar */
 .navbar {
   position: fixed;
@@ -122,6 +119,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-links {
   height: 0;
+
   overflow: hidden;
 
   transition: var(--mainTransition);
@@ -155,34 +153,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 130px;
 }
 
-@media screen and (min-width: 768px) {
-  .nav-btn {
-    display: none;
-  }
-
-  .nav-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    max-width: 1170px;
-    margin: 0 auto;
-  }
-
-  .nav-links {
-    display: flex;
-
-    height: auto;
-    margin-left: 4rem;
-  }
-
-  .nav-links a {
-    margin: 0 1rem;
-    padding: 0.5rem 0;
-  }
-}
-
-
 /* Hero */
 .defaultHero,
 .workshopsHero,
@@ -203,7 +173,6 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url("./images/contact-hero.jpg");
 }
 
-
 /* Banner */
 .banner {
   display: flex;
@@ -219,9 +188,11 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: capitalize;
   letter-spacing: var(--mainSpacing);
 }
+
 .banner h1 {
   font-size: 2.5rem;
 }
+
 .banner div {
   width: 10rem;
   height: 5px;
@@ -230,29 +201,13 @@ h1, h2, h3, h4, h5, h6 {
 
   background: var(--blue);
 }
+
 .banner p {
   margin-bottom: 2rem;
 
   font-size: 1.2rem;
   font-family: 'Maitree', serif;
 }
-@media screen and (min-width: 576px) {
-  .banner {
-    padding: 2rem 3rem;
-  }
-  .banner h1 {
-    font-size: 3rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  .banner {
-    padding: 2rem 6rem;
-  }
-  .banner h1 {
-    font-size: 4rem;
-  }
-}
-
 
 /* Title */
 .section-title {
@@ -277,7 +232,6 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--blue);
 }
 
-
 /* featured workshop */
 .featured-workshops {
   padding: 5rem 0;
@@ -292,22 +246,6 @@ h1, h2, h3, h4, h5, h6 {
   grid-row-gap: 2rem;
   grid-column-gap: 40px;
 }
-
-@media screen and (min-width: 776px) {
-  .featured-workshops-center {
-    width: 90vw;
-
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .featured-workshops-center {
-    width: 95vw;
-    max-width: 1170px;
-  }
-}
-
 
 /* workshop page */
 .workshop {
@@ -395,7 +333,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--offWhite);
 }
 
-
 /* single workshop */
 .single-workshop {
   padding: 5rem 0 0 0;
@@ -452,25 +389,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
 }
 
-@media screen and (min-width: 992px) {
-  .single-workshop-images,
-  .single-workshopinfo {
-    width: 95vw;
-    max-width: 1170px;
-  }
-
-  .single-workshop-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2rem;
-  }
-
-  .info {
-    padding-left: 3rem;
-  }
-}
-
-
 /* for the workshop list */
 .workshopslist {
   padding: 5rem 0;
@@ -485,20 +403,6 @@ h1, h2, h3, h4, h5, h6 {
   grid-row-gap: 2rem;
   grid-column-gap: 30px;
 }
-
-@media screen and (min-width: 776px) {
-  .workshopslist-center {
-    width: 90vw;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .workshopslist-center {
-    width: 95vw;
-    max-width: 1170px;
-  }
-}
-
 
 /* for the workshop filter section */
 .filter-container {
@@ -540,6 +444,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .size-input {
   width: 40%;
+
   padding: 0.2rem;
   border: 1px solid var(--purple);
   border-radius: 0.3rem;
@@ -553,20 +458,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.8rem;
 }
 
-@media screen and (min-width: 776px) {
-  .filter-form {
-    width: 70vw;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .filter-form {
-    width: 95vw;
-    max-width: 1170px;
-  }
-}
-
-
 /* connect page */
 .connect {
   padding: 5rem 0;
@@ -578,7 +469,6 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
   
   padding: 0.5em;
-
 }
 
 #connect-form {
@@ -629,4 +519,97 @@ h1, h2, h3, h4, h5, h6 {
 
   background: var(--purple);
   color: var(--offWhite);
+}
+
+/* time to make things responsive! */
+@media screen and (min-width: 992px) {
+  .banner {
+    padding: 2rem 6rem;
+  }
+  .banner h1 {
+    font-size: 4rem;
+  }
+
+  .featured-workshops-center {
+    width: 95vw;
+    max-width: 1170px;
+  }
+
+  .single-workshop-images,
+  .single-workshopinfo {
+    width: 95vw;
+    max-width: 1170px;
+  }
+
+  .single-workshop-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+  }
+
+  .info {
+    padding-left: 3rem;
+  }
+
+  .workshopslist-center {
+    width: 95vw;
+    max-width: 1170px;
+  }
+
+  .filter-form {
+    width: 95vw;
+    max-width: 1170px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-btn {
+    display: none;
+  }
+
+  .nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+
+  .nav-links {
+    display: flex;
+
+    height: auto;
+    margin-left: 4rem;
+  }
+
+  .nav-links a {
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+  }
+}
+
+@media screen and (min-width: 776px) {
+  .featured-workshops-center {
+    width: 90vw;
+
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  }
+
+  .workshopslist-center {
+    width: 90vw;
+  }
+
+  .filter-form {
+    width: 70vw;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .banner {
+    padding: 2rem 3rem;
+  }
+  .banner h1 {
+    font-size: 3rem;
+  }
 }
