@@ -132,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-links a {
   display: block;
 
-  padding: 1rem 0;
+  padding: 0.8rem 0;
 
   transition: var(--mainTransition);
 
@@ -152,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .show-nav {
-  height: 100px;
+  height: 130px;
 }
 
 @media screen and (min-width: 768px) {
@@ -621,3 +621,12 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: none;
 }
 
+/* footer */
+.footer {
+  margin: 0;
+  margin-top: 3em;
+  padding: 1em;
+
+  background: var(--purple);
+  color: var(--offWhite);
+}

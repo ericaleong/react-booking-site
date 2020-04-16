@@ -9,6 +9,7 @@ import {WorkshopContext} from '../context';
 import StyledHero from '../components/StyledHero';
 // to adjust dates
 import Moment from 'react-moment';
+import Footer from '../components/Footer';
 
 export default class SingleWorkshop extends 
 Component {
@@ -86,6 +87,7 @@ Component {
         </article>
       </div>
    </section>
+   <Footer/>
     </>
     );
   };

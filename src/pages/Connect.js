@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import Banner from '../components/Banner';
 import {Link} from 'react-router-dom';
 import ConnectForm from '../components/ConnectForm';
+import Footer from '../components/Footer';
 
 export default function Connect() {
   return (
@@ -15,9 +16,8 @@ export default function Connect() {
       </Link>
     </Banner>
   </Hero>
-
   <ConnectForm/>
-
+  <Footer/>
   </>
   )
 }
